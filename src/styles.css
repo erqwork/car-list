@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Righteous&display=swap');
+
+body {
+    background: linear-gradient(25deg, #83a4d4, #b6fbff);
+    min-height: 100vh;
+}

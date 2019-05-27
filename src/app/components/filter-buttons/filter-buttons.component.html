@@ -1,0 +1,57 @@
+<div class="filter-buttons">
+  <!-- <h2 class="filters-header">
+    Use the filters below to find the best version of your car.
+    Enter some filters below to find the best verion of your car.
+  </h2> -->
+  <div class="filter-container">
+    <label for="filterer" class="filterer-label">
+      Enter some filters below to find the best verion of your car.
+    </label>
+    
+    <input #optionFilters
+           type="text"
+           id="filterer"
+           class="filter-input">
+    <button class="apply-filter"
+            (click)="createFilterArr(optionFilters.value); optionFilters.value=''; ">
+      Filter
+    </button>
+
+    <div class="error-message" *ngIf="isError">
+      <p>{{ error.message }}</p>
+    </div>
+
+    <div class="filter-options">
+      <div class="filter-option" *ngFor="let fo of filterOptions">
+        <button class="remove-option" (click)="removeOptionFilter(fo.name)">&times;</button>{{ fo.name }} 
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- <div class="filter-button">
+    <input type="checkbox" id="sunroof" value="hasSunroof">
+    <label for="sunroof">Sunroof</label>
+  </div>
+  <div class="filter-button">
+    <input type="checkbox" id="fourWheel" value="isFourWheelDrive">
+    <label for="fourWheel">Four-wheel Drive</label>
+  </div>
+  <div class="filter-button">
+    <input type="checkbox" id="lowMiles" value="hasLowMiles">
+    <label for="lowMiles">Low Miles</label>
+  </div>
+  <div class="filter-button">
+    <input type="checkbox" id="powerWindows" value="hasPowerWindows">
+    <label for="powerWindows">Power Windows</label>
+  </div>
+  <div class="filter-button">
+    <input type="checkbox" id="navigation" value="hasNavigation">
+    <label for="navigation">Navigation</label>
+  </div>
+  <div class="filter-button">
+    <input type="checkbox" id="heatedSeats" value="hasHeatedSeats`">
+    <label for="heatedSeats">Heated Seats</label>
+  </div> -->
+
+</div>

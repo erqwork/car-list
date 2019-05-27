@@ -1,4 +1,4 @@
-export default [
+export const carData = [
     {
         _id: '59d2698c2eaefb1268b69ee5',
         make: 'Chevy',
@@ -116,4 +116,4 @@ export default [
         hasNavigation: false,
         hasHeatedSeats: true
     }
-];
+]

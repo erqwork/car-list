@@ -1,0 +1,79 @@
+.filter-buttons,
+.filter-buttons * {
+    box-sizing: border-box;
+}
+
+.filter-buttons {
+    width: 52%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 4vw auto 2vw;
+}
+
+.filterer-label {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filter-input {
+    width: 80%;
+    padding: 1vw 2vw;
+    border: 0;
+}
+
+.apply-filter {
+    width: 20%;
+    padding: 1vw 2vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    border: 0;
+    cursor: pointer;
+}
+
+.apply-filter:hover,
+.apply-filter:focus {
+    background: #cbcbcb;
+
+}
+.apply-filter:active {
+    background: #bababa;
+}
+
+.error-message {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #fff;
+    background: #ff1234;
+    padding: 2px;
+}
+
+.filter-options {
+    display: flex;
+    flex-flow: row wrap; 
+    margin: 2vw 0 0;
+}
+
+.filter-option {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background: #ffd194;
+    border-radius: 15px;
+    margin: 0 1vw;
+    padding: 4px 1vw;
+}
+
+.filter-option:first-child {
+    margin-left: 0;
+}
+
+.remove-option {
+    border: 0;
+    background: none;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .filter-buttons {
+        width: 80%;
+    }
+}

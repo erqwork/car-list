@@ -1,0 +1,48 @@
+<div id="carNumber{{car._id}}" class="car-details">
+    <div class="details-box" [ngStyle]="{'border-color': car.color}">
+      
+      <h3 class="car-header">
+          {{ car.year }} {{ car.color }} {{ car.make }}
+      </h3>
+      <div class="photo">
+        <img src="../../../assets/carSquare.jpg" alt="{{ car.year }} {{ car.color }} {{ car.make }}" >
+      </div>
+      <div class="amenities">        
+          <div class="amenity" *ngIf="car.hasSunroof">
+            <img src="../../../assets/white-balance-sunny.png" alt="Sunroof">
+            <span class="tooltip">sunroof</span>
+          </div>
+          <div class="amenity" *ngIf="car.isFourWheelDrive">
+            <img src="../../../assets/numeric-4-circle.png" alt="Four-Wheel Drive">
+            <span class="tooltip">four-wheel drive</span>
+          </div>
+          <div class="amenity" *ngIf="car.hasLowMiles">          
+            <img src="../../../assets/counter.png" alt="Low Miles">
+            <span class="tooltip">low mileage</span>
+          </div>
+          <div class="amenity" *ngIf="car.hasPowerWindows">
+            <img src="../../../assets/car-door.png" alt="Power Windows">
+            <span class="tooltip">power windows</span>
+          </div>
+          <div class="amenity" *ngIf="car.hasNavigation">
+            <img src="../../../assets/map-marker.png" alt="Navigation">
+            <span class="tooltip">navigation</span>
+          </div>
+          <div class="amenity" *ngIf="car.hasHeatedSeats">
+              <img src="../../../assets/seat-legroom-normal.png" alt="Heated Seats">
+            <span class="tooltip">heated seats</span>
+          </div>        
+      </div>
+        
+    </div>
+    
+    <div class="price-box">
+      <p class="only">
+        ONLY
+      </p>
+      <p class="price">
+        ${{ car.price  | number:'2.' }}!
+      </p>
+    </div>
+    
+  </div>

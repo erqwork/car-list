@@ -1,0 +1,135 @@
+.car-details {
+    font-family: 'Montserrat', sans-serif;    
+    margin: 1vw;
+    border: 1px solid #333;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background: #fff;    
+}
+
+.car-details * {
+    box-sizing: border-box;
+}
+
+.details-box {
+    flex-basis: 80%;
+    padding: 2vw;
+    border-top: 1vw solid;
+}
+
+.car-header {  
+    font-family: 'Righteous', sans-serif;  
+    font-size: 2.6rem;
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 2vw;
+}
+
+.photo {
+    width: 16vw;
+    height: 16vw;
+}
+
+.photo img {
+    max-width: 100%;
+    border: 6px solid;
+}
+
+.amenities {
+    width: 20vw;
+    display: flex;
+    flex-flow: row nowrap;
+}
+  
+.amenity {
+    position: relative;
+    padding: 4px;
+    width: calc(16vw / 6);    
+    cursor: pointer;
+}
+  
+.amenity img {
+    max-width: 100%;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    white-space: nowrap;
+    background: #ffd194;
+}
+
+.tooltip:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: rotate(45deg) translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #ffd194;    
+}
+
+.amenity:hover .tooltip {
+    display: inline;    
+    padding: 8px;
+    border-radius: 6px;      
+}
+
+.price-box {
+    flex-basis: 20%;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 1vw;
+    background: linear-gradient(12deg, #ffd194, #d1913c);
+    box-shadow: -10px 0 10px -8px rgba(0, 0, 0, 0.2);
+}
+  
+.price-box p {
+    margin: 0;
+    transform: rotate(12deg);
+}
+
+@media screen and (max-width: 768px) {
+    .car-header {
+        font-size: 2rem;
+        flex-basis: 100%;
+    }
+
+    .details-box {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .photo {
+        width: 28vw;
+        height: 28vw;
+    }
+
+    .amenities {
+        width: 38vw;
+        align-self: center;
+    }
+
+    .amenity {
+        width: calc(38vw / 6);
+    }
+
+    .price-box {
+        font-size: 1.4rem;
+    }
+}

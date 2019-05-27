@@ -1,0 +1,16 @@
+.list-of-cars {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.single-car {
+    flex-basis: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .single-car {
+        flex-basis: 100%;
+    }
+}

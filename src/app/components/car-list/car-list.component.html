@@ -1,0 +1,5 @@
+<div class="list-of-cars">
+  <div *ngFor="let car of cars | async" class="single-car">
+    <single-car [car]="car"></single-car>
+  </div>
+</div>
